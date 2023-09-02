@@ -8,31 +8,7 @@
 #define DLAPACK
 #define EIGENSOLVER 1
 
-#if defined(__clang__)
-#    pragma clang diagnostic push
-#    pragma clang diagnostic ignored "-Wsign-compare"
-#    pragma clang diagnostic ignored "-Wshadow"
-#    pragma clang diagnostic ignored "-Wdouble-promotion"
-#    pragma clang diagnostic ignored "-Wunused-parameter"
-#    pragma clang diagnostic ignored "-Wnon-virtual-dtor"
-#elif defined(__GNUC__) || defined(__GNUG__)
-#    pragma GCC diagnostic push
-#    pragma GCC diagnostic ignored "-Wsign-compare"
-#    pragma GCC diagnostic ignored "-Wshadow"
-#    pragma GCC diagnostic ignored "-Wdouble-promotion"
-#    pragma GCC diagnostic ignored "-Wunused-parameter"
-#    pragma GCC diagnostic ignored "-Wnon-virtual-dtor"
-#    pragma GCC diagnostic ignored "-Wuseless-cast"
-#    pragma GCC diagnostic ignored "-Wunused-local-typedefs"
-#endif
-
 #include <HPDDM.hpp>
-
-#if defined(__clang__)
-#    pragma clang diagnostic pop
-#elif defined(__GNUC__) || defined(__GNUG__)
-#    pragma GCC diagnostic pop
-#endif
 
 #include "../distributed_operator/distributed_operator.hpp"
 

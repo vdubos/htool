@@ -187,13 +187,12 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND BUILD_TESTING)
         INTERFACE -Wall
                   -Wextra
                   -Werror
-                  -Wshadow
                   -Wnon-virtual-dtor
                   -pedantic
+                  -Wno-cast-function-type
                   #   -Wold-style-cast
-                  -Wcast-align
+                  #   -Wcast-align
                   -Wunused
-                  -Woverloaded-virtual
                   #   -Wconversion
                   #   -Wsign-conversion
                   -Wdouble-promotion
@@ -211,7 +210,6 @@ if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND BUILD_TESTING)
                       -Wduplicated-branches
                       -Wlogical-op
                       -Wnull-dereference
-                      -Wuseless-cast
                       -fmax-errors=200)
     endif()
     add_custom_target(build-tests)

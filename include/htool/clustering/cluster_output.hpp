@@ -96,10 +96,8 @@ Cluster<CoordinatesPrecision> read_cluster_tree(std::string file_cluster_tree_pr
         // throw std::logic_error("[Htool error] Cannot open file containing tree");
     }
     std::vector<std::vector<std::string>> outputs;
-    int count = 0;
     while (std::getline(input_tree, line)) {
         outputs.push_back(split(line, delimiter));
-        count++;
     }
 
     // Cluster root
